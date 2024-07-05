@@ -7,6 +7,7 @@ SENDER = "christasaraluke19@gmail.com"
 RECEIVER = "christasaraluke19@gmail.com"
 PASSWORD = os.getenv("PASSWORD")
 
+
 def send_email(image_path):
     email_message = EmailMessage()
     email_message['Subject'] = 'New Customer Showed Up!'
@@ -27,6 +28,7 @@ def send_email(image_path):
     gmail.sendmail(SENDER, RECEIVER, email_message.as_string())
     gmail.quit()
     print('Email Send..................')
+
 
 if __name__ == "__main__":
     send_email('images/77.png')

@@ -9,10 +9,12 @@ original_frame = None
 status_list = []
 count = 1
 
+
 def clean_images():
     images = glob.glob(f"images/*.png")
     for each in images:
         os.remove(each)
+
 
 video = cv2.VideoCapture(0)
 time.sleep(1)
